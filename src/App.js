@@ -8,6 +8,7 @@ import Champions from "./components/Champions";
 
 function App() {
   const championsUrl = "http://127.0.0.1:3000/champions"
+  // const usersUrl = "http://127.0.0.1:3000/users"
   const [championsData, setChampionsData] = useState([]);
 
   useEffect(() =>{
@@ -22,8 +23,8 @@ function App() {
     <div className="App">
       <Header />
       <Routes>
-        <Route path="/champions" element={<Champions champion={championsData}/>} />
         <Route path="/" element={<Signup />} />
+        <Route path="/champions" element={<Champions champion={championsData}/>} />
       </Routes>
       <Footer />
     </div>
