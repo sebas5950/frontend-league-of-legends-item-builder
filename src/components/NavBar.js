@@ -14,6 +14,7 @@ function NavBar({ user, setUser }) {
     <header>
       <div>
         <Link to="/">Home</Link>
+        <Link to="/champions">Champions</Link>
       </div>
       <div>
         {user ? (
@@ -24,6 +25,7 @@ function NavBar({ user, setUser }) {
             <Link to="/login">Login</Link>
           </>
         )}
+        
       </div>
     </header>
   );
