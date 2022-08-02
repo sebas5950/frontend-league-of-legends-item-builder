@@ -22,7 +22,7 @@ const Signup = ({  }) => {
             password
         }
        
-        fetch(`http://localhost:3000/users`,{
+        fetch(`http://localhost:3001/users`,{
           method:'POST',
           headers:{'Content-Type': 'application/json'},
           body:JSON.stringify(user)
@@ -30,7 +30,7 @@ const Signup = ({  }) => {
         .then(res => {
             if(res.ok){
                 res.json().then(user => {
-                    navigate(`http://127.0.0.1:3001/users/${user.id}`)
+                    navigate(`http://127.0.0.1:3000/users/${user.id}`)
                 })
             }else {
                 res.json().then(json => setErrors(Object.entries(json.errors)))
