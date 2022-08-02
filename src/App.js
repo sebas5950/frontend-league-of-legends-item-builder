@@ -9,12 +9,10 @@ import Login from "./components/Login"
 import Home from "./components/Home"
 
 function App() {
-  const championsUrl = "http://127.0.0.1:3001/champions"
-  // const usersUrl = "http://127.0.0.1:3000/users"
   const [championsData, setChampionsData] = useState([]);
   const [user, setUser] = useState(null);
   useEffect(() =>{
-    fetch(championsUrl)
+    fetch('/champions')
     .then(res => res.json())
     .then(data => setChampionsData(data))
   }, []);
@@ -22,7 +20,7 @@ function App() {
   
 
   useEffect(() => {
-    fetch("/user").then((r) => {
+    fetch("/users").then((r) => {
       if (r.ok) {
         r.json().then((user) => setUser(user));
       }
@@ -34,26 +32,16 @@ function App() {
         <NavBar user={user} setUser={setUser} />
         <main>
           {user ? (
-            <Switch>
-              <Route path="/">
-                <Home />
-              </Route>
-            </Switch>
+            <Routes>
+              <Route path="/" element={<Home user={user} />}/>
+            </Routes>
           ) : (
-            <Switch>
-              <Route path="/signup">
-                <SignUp setUser={setUser} />
-              </Route>
-              <Route path="/login">
-                <Login setUser={setUser} />
-              </Route>
-              <Route path="/">
-                <Home />
-              </Route>
-              <Route path="/champions">
-                <Champions championsData = {championsData}/>
-              </Route>
-            </Switch>
+            <Routes>
+              <Route path="/signup" element={<SignUp setUser={setUser} />} />
+              <Route path="/login"element={<Login setUser={setUser} />} />
+              <Route path="/" element={<Home />} />
+              <Route path="/champions" element={<Champions championsData = {championsData}/>} />
+            </Routes>
           )}
         </main>
       </>
