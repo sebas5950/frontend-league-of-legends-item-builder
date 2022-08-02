@@ -1,12 +1,12 @@
 import ChampionCard from "./ChampionCard"
 
-const Champions = ({champion}) => {
+const Champions = ({championsData}) => {
 
     
   
     return(
         <div>
-            {champion.map(champ =>{
+            {championsData.map(champ =>{
         return <ChampionCard champ={champ} key={champ.id}/>
     })}
         </div>
