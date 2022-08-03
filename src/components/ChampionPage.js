@@ -38,15 +38,24 @@ const ChampionPage = () => {
 
       <p>{`Description: ${blurb}`}</p>
       <table>
-        <tr>Difficulty:</tr>
-        <td>{difficulty}</td>
-        <tr>Defense:</tr>
-        <td>{defense}</td>
-        <tr>Magic:</tr>
-        <td>{magic}</td>
-        <tr>Attack:</tr>
-        <td>{attack}</td>
+        <thead>
+          <tr>
+            <th>Difficulty</th>
+            <th>Defense:</th>
+            <th>Magic:</th>
+            <th>Attack:</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{difficulty}</td>
+            <td>{defense}</td>
+            <td>{magic}</td>
+            <td>{attack}</td>
+          </tr>
+        </tbody>
       </table>
+
       {itemsData.map((item) => {
         return <ItemCard item={item} key={item.id} />;
       })}
