@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-
+import UserBuilds from "./UserBuilds";
 import ItemCard from "./ItemCard";
 
 const ChampionPage = () => {
@@ -9,6 +9,7 @@ const ChampionPage = () => {
 
   const [championData, setChampionData] = useState({});
   const [itemsData, setItemsData] = useState([]);
+  const [builds, setBuilds] = useState([]);
 
   useEffect(() => {
     fetch(`/champions/${id}`)
@@ -26,6 +27,16 @@ const ChampionPage = () => {
     navigate(-1);
   }
 
+  function itemPicker(newItem){
+    if (builds.includes(newItem) === false) {
+      setBuilds([...builds, newItem])
+    } else {
+      const removedItem = builds.filter((item) => {
+        return item !== newItem
+      })
+      setBuilds(removedItem)
+    }
+  }
   const { name, title, blurb, attack, defense, magic, difficulty, image } =
     championData;
 
@@ -56,8 +67,10 @@ const ChampionPage = () => {
         </tbody>
       </table>
 
+      <UserBuilds itemPicker={itemPicker} builds ={builds}/>
+
       {itemsData.map((item) => {
-        return <ItemCard item={item} key={item.id} />;
+        return <ItemCard item={item} key={item.id} itemPicker = {itemPicker} />;
       })}
       <button onClick={handleClick}>back</button>
     </div>

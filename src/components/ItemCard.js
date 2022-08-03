@@ -1,11 +1,15 @@
 import React, {useState, useEffect} from "react"
 
-const ItemCard = ({item}) => {
+const ItemCard = ({ item, itemPicker }) => {
 
     const {name, attack, health, magic, desc, image} = item
 
     return(
-        <div>
+        <div 
+        className="item card"
+        key={item.id}
+        onClick={() => itemPicker(item)}
+        >
             <img className="item-image" src={image} alt={name} />
             <p>{attack}</p>
             <p>{health}</p>
