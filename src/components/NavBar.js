@@ -15,11 +15,11 @@ function NavBar({ user, setUser }) {
       <div>
         <Link to="/">Home</Link>
         <Link to="/champions">Champions</Link>
-        <Link to="/builds">Builds</Link>
+        <Link to="/itembuilds">Builds</Link>
       </div>
       <div>
         {user ? (
-          <button onClick={handleLogoutClick}>Logout</button>
+          <Link to="/" onClick={handleLogoutClick}>Logout</Link>
         ) : (
           <>
             <Link to="/signup">Signup</Link>

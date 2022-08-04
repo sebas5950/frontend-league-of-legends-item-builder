@@ -68,7 +68,7 @@ function App() {
               element={<ChampionPage />}
               />
               <Route
-              path="/builds" 
+              path="/itembuilds" 
               element={<UserBuilds items={items} champ={championsData}/>}
               /> 
             </Routes>

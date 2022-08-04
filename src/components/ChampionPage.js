@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import UserBuilds from "./UserBuilds";
 
 
 const ChampionPage = () => {
@@ -7,7 +8,7 @@ const ChampionPage = () => {
   const { id } = useParams();
 
   const [championData, setChampionData] = useState({});
-  const [builds, setBuilds] = useState([]);
+  const [items, setItems] = useState([]);
 
   useEffect(() => {
     fetch(`/champions/${id}`)
@@ -15,17 +16,18 @@ const ChampionPage = () => {
       .then((data) => setChampionData(data));
   }, []);
 
- 
-
-  // useEffect(() => {
-  //   fetch(`/champions/${id}/items`)
-  //   .then(res => res.json())
-  //   .then(newDat => setItems(newDat))
-  // }, [])
+  useEffect(() => {
+    fetch(`/champions/${id}/items`)
+    .then(res => res.json())
+    .then(newDat => setItems(newDat))
+  }, [])
 
   function handleClick() {
     navigate(-1);
   }
+  const buildItems = items.map(item => {
+    return <UserBuilds items={item} key={item.id}/>
+  })
 
   // function itemPicker(newItem){
   //   if (builds.includes(newItem) === false) {
@@ -68,11 +70,8 @@ const ChampionPage = () => {
         </tbody>
       </table>
 
-      {/* {items.map(item => {
-        return <UserBuilds />
-      })} */}
-
-   
+      
+      {buildItems}
       <button onClick={handleClick}>back</button>
     </div>
   );
