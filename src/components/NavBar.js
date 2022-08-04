@@ -15,6 +15,7 @@ function NavBar({ user, setUser }) {
       <div>
         <Link to="/">Home</Link>
         <Link to="/champions">Champions</Link>
+        <Link to="/builds">Builds</Link>
       </div>
       <div>
         {user ? (

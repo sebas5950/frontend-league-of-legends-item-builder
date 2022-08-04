@@ -8,11 +8,15 @@ import Champions from "./components/Champions";
 import Login from "./components/Login";
 import Home from "./components/Home";
 import ChampionPage from "./components/ChampionPage"
+import UserBuilds from "./components/UserBuilds";
 
 function App() {
 
   const [championsData, setChampionsData] = useState([]);
   const [user, setUser] = useState(null);
+  const [filterChamp, setFilterChamp ] = useState([])
+  const [items, setItemsData ] = useState([])
+
 
   useEffect(() => {
     fetch("/champions")
@@ -21,12 +25,26 @@ function App() {
   }, []);
 
   useEffect(() => {
+    fetch(`/items`)
+      .then((res) => res.json())
+      .then((data) => setItemsData(data));
+  }, []);
+
+
+  useEffect(() => {
     fetch("/me").then((r) => {
       if (r.ok) {
         r.json().then((user) => setUser(user));
       }
     });
   }, []);
+
+   function grabSearch(value){
+    setFilterChamp(value)
+   }
+  const newChamp = championsData.filter((champ) => {
+    return (champ.name.includes(filterChamp))
+  })
 
 
   return (
@@ -49,6 +67,10 @@ function App() {
               path="/:id/details"
               element={<ChampionPage />}
               />
+              <Route
+              path="/builds" 
+              element={<UserBuilds items={items} champ={championsData}/>}
+              /> 
             </Routes>
           ) : (
             <Routes>
