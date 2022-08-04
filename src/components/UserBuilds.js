@@ -1,21 +1,20 @@
 import {useState, useEffect} from 'react';
 import ItemCard from "./ItemCard";
+import UserBuildBar from './UserBuildBar';
 
-
-const UserBuilds = ({ champ, items }) => {
+const UserBuilds = ({ champ, items, user, builds }) => {
 
 
     const [selectData, setSelectData] = useState(1)
     const [updatedItems, setUpdatedItems ] = useState([])
-    const [buildItems, setBuildItems ] = useState(1)
+    const [buildItems, setBuildItems ] = useState([])
 
-
-    const newData = {
-        item_id: buildItems,
+    const newData= ({    
+        items_id: buildItems,
         champion_id: selectData,
-        name: 'w.e'
-    }
-
+        user_id: 1,
+        id: 1
+    })
  const champion = champ.map(cha => {
     return <option value={cha.id} key={cha.id}>{cha.id}. {cha.name}</option>
  })
@@ -29,7 +28,7 @@ function handleChange(e){
 }
 
 function handleItemChange(e){
-    setBuildItems(e.target.value);
+    setBuildItems([...buildItems, e.target.value]);
 }
 
    useEffect(() => {
@@ -41,6 +40,7 @@ function handleItemChange(e){
  
 
   function handleSubmit(e){
+    console.log(newData)
     e.preventDefault()
     fetch(`/builds`, {
         method: "POST",
@@ -53,11 +53,6 @@ function handleItemChange(e){
     .then(console.log)
 }
   
-
-
-//   console.log(selectData)
-    // console.log(newid)
-    // const {name, attack, health, magic, desc, image} = item
 
 return (
     <div className="user builds">
@@ -77,7 +72,11 @@ return (
          {/* {items.map(item => {
             return <ItemCard item={item} />
         })} */}
+        {builds.map(build =>{
+            <UserBuildBar key = {build.id} build={build}/>
+        })}
     </div >
+   
 )
  
 }

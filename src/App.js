@@ -16,7 +16,7 @@ function App() {
   const [user, setUser] = useState(null);
   const [filterChamp, setFilterChamp ] = useState([])
   const [items, setItemsData ] = useState([])
-
+  const [builds, setBuilds] = useState([])
 
   useEffect(() => {
     fetch("/champions")
@@ -37,6 +37,12 @@ function App() {
         r.json().then((user) => setUser(user));
       }
     });
+  }, []);
+
+  useEffect(() => {
+    fetch("/builds")
+      .then((res) => res.json())
+      .then((data) => setBuilds(data));
   }, []);
 
    function grabSearch(value){
@@ -69,7 +75,7 @@ function App() {
               />
               <Route
               path="/builds" 
-              element={<UserBuilds items={items} champ={championsData}/>}
+              element={<UserBuilds items={items} champ={championsData} user={setUser} builds = {builds}/>}
               /> 
             </Routes>
           ) : (
