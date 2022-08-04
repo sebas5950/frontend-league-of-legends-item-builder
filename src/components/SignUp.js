@@ -6,19 +6,17 @@ import { useNavigate } from "react-router-dom"
 const SignUp = () => {
     const [formData, setFormData] = useState({
         username:'',
-        email:'',
         password:''
     })
     const [errors, setErrors] = useState([])
     const navigate = useNavigate()
 
-    const {username, email, password} = formData
+    const {username, password} = formData
 
     function onSubmit(e){
         e.preventDefault()
         const user = {
             username,
-            email,
             password
         }
        
@@ -30,7 +28,7 @@ const SignUp = () => {
         .then(res => {
             if(res.ok){
                 res.json().then(user => {
-                    navigate(`/me/${user.id}`)
+                    navigate(`/login`)
                 })
              }
             //  else {
@@ -53,9 +51,9 @@ const SignUp = () => {
           <input type='text' name='username' value={username} onChange={handleChange} />
        
         <label>
-         Email
+         
          </label>
-        <input type='text' name='email' value={email} onChange={handleChange} />
+        
        
         <label>
          Password

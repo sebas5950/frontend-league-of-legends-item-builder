@@ -1,4 +1,8 @@
-
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 .champ-image{
     width: 20%;
@@ -7,3 +11,82 @@
 .item-image{
     width: 4%;
 }
+
+nav {
+    position: sticky;
+    top: 0;
+}
+
+.navbar.active {
+    background: #000000;
+}
+
+.navbar a {
+    
+    font-family: 'Friz Quadrata Std', sans-serif;
+    float: left;
+    color:#EDB852;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13.5px;
+    display: block;
+    padding-left:11%; 
+    padding-right: 11%;
+    padding-top: 30px;
+    text-shadow: 1px 1px #000000;
+  }
+
+  .navbar a:hover {
+    font-weight: 1000;
+  }
+  
+
+  .hero_title {
+    font-family: 'Friz Quadrata Std', sans-serif;
+    font-size: 500%;
+    text-align: center;
+    position: absolute;
+    top: 33%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:#EDB852;
+    width: 900px;
+    text-shadow: 4px 4px #000000;
+  }
+
+  .home_title{
+    font-family: 'Friz Quadrata Std', sans-serif;
+    font-size: 200%;
+    text-align: center;
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:#EDB852;
+    text-shadow: 3px 3px #000000;
+    
+  }
+
+  .home_title2{
+    font-family: 'Friz Quadrata Std', sans-serif;
+    font-size: 100%;
+    text-align: center;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:rgb(255, 255, 255);
+    
+  }
+
+  .logo {
+    display: inline-block;
+    position: absolute;
+    height: 80px;
+    width: auto;
+    margin-left: 50px;
+    margin-top: 5px;
+    
+  }
+
+
