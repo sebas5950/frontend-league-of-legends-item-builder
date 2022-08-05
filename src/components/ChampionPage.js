@@ -11,6 +11,7 @@ const ChampionPage = ({ user }) => {
   const [items, setItems] = useState([]);
   const [comments, setComments] = useState([])
   const [commentData, setCommentData] = useState([])
+  console.log(commentData)
   useEffect(() => {
     async function champion(){
     await fetch(`/champions/${id}`)
@@ -19,11 +20,11 @@ const ChampionPage = ({ user }) => {
 
         await fetch(`/champions/${id}/items`)
         .then(res => res.json())
-        .then(newDat => setItems(newDat))
+        .then( async newDat => setItems(newDat))
 
       await  fetch(`/champions/${id}/comments`)
         .then(res => res.json())
-        .then(newDat => setComments(newDat))
+        .then( async newDat => setComments(newDat))
   } 
   champion()
   },[]);
@@ -67,9 +68,7 @@ const ChampionPage = ({ user }) => {
   function handleChange(e) {
     setCommentData(e.target.value)
   }
-  function handleClick() {
-    navigate(-1);
-  }
+ 
   // function editClick(comment) {
   //   setCommentData(comment)
   // }
@@ -93,7 +92,6 @@ const ChampionPage = ({ user }) => {
 
   return (
     <div className="bgimage2">  
-    <button onClick={handleClick}>back</button>
       <h4 className="bigtitle">
         {name}, {title} 
       </h4>

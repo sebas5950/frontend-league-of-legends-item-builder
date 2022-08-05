@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"
+
 
 function Login({ setUser }) {
   const [username, setUsername] = useState("");
@@ -15,11 +17,14 @@ function Login({ setUser }) {
     }).then((r) => {
       if (r.ok) {
         r.json().then((user) => setUser(user));
+        navigate(`/`)
+
       }
     });
   }
 
-  
+  const navigate = useNavigate()
+
 
   return (
     <section>

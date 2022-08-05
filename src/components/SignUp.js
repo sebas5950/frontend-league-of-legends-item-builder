@@ -30,7 +30,7 @@ const SignUp = () => {
         .then(res => {
             if(res.ok){
                 res.json().then(user => {
-                    navigate(`/me/${user.id}`)
+                    navigate(`/login`)
                 })
              }
             //  else {

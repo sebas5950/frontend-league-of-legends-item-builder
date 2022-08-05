@@ -8,6 +8,7 @@ const CommentCard = ({ comment, user, deleteComment, setComments }) => {
     function handleChange(e) {
         setCommentData(e.target.value)
     }
+    
     function onEditSubmit(e){
         // e.preventDefault()
           const comData ={
