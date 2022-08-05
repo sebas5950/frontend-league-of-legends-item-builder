@@ -32,16 +32,20 @@ function App() {
         <NavBar user={user} setUser={setUser} />
         <main>
           {user ? (
+            
             <Routes>
               <Route path="/" element={<Home user={user} />}/>
             </Routes>
+            
           ) : (
+            
             <Routes>
               <Route path="/signup" element={<SignUp setUser={setUser} />} />
               <Route path="/login"element={<Login setUser={setUser} />} />
               <Route path="/" element={<Home />} />
               <Route path="/champions" element={<Champions championsData = {championsData}/>} />
             </Routes>
+            
           )}
         </main>
       </>

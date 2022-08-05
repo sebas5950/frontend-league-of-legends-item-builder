@@ -1,7 +1,6 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 .champ-image{
@@ -34,10 +33,17 @@ nav {
     padding-right: 11%;
     padding-top: 30px;
     text-shadow: 1px 1px #000000;
+   
+    
+  }
+  .navbar {
+    z-index: 100;
+ 
   }
 
   .navbar a:hover {
     font-weight: 1000;
+    color: aliceblue;
   }
   
 
@@ -69,13 +75,14 @@ nav {
 
   .home_title2{
     font-family: 'Friz Quadrata Std', sans-serif;
-    font-size: 100%;
+    font-size: 200%;
     text-align: center;
     position: absolute;
-    top: 20%;
+    top: 53%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color:rgb(255, 255, 255);
+    color:#EDB852;
+    text-shadow: 3px 3px #000000;
     
   }
 
@@ -89,4 +96,141 @@ nav {
     
   }
 
+.champ-image {
+  
+  width: 280px;
+  border: 4px solid #EDB852;
+  
+}
 
+
+
+
+.championtext {
+  font-family: 'Friz Quadrata Std', sans-serif;
+  font-size: 130%;
+  color:aliceblue;
+}
+
+.card-wrapper {
+width: 100%;
+display: grid;
+grid-template-columns: auto auto auto auto auto;
+  gap: 50px;
+  padding-top: 150px;
+  padding-bottom: 20px;
+padding-left: 20px;
+background-image: url('https://cdn1.dotesports.com/wp-content/uploads/2021/09/09145842/SummonersRift.jpg' );
+background-size: cover;
+height: 100vh;
+overflow-y: scroll;
+position: absolute;
+}
+
+.card-wrapper::-webkit-scrollbar {
+  display: none;
+  
+}
+
+
+
+
+.title {
+  
+margin-top: -33px;
+margin-left: 10px;
+}
+
+
+.loginbox {
+  font-family: 'Friz Quadrata Std', sans-serif;
+  color:#EDB852;
+  text-align: center;
+  padding-top: 10px;
+  text-shadow: 4px 4px #000000;
+  
+}
+
+.loginbox h1 {
+  font-size: 50px;
+}
+
+.form {
+  width: 450px;
+  height: 320px;
+  background: #111010;
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 25px;
+  padding: 40px 25px;
+  
+}
+
+.loginname{
+margin: 7px;
+}
+
+.passwordname {
+  margin: 7px;
+}
+
+
+.signupbox {
+  font-family: 'Friz Quadrata Std', sans-serif;
+  color:#EDB852;
+  text-align: center;
+  padding-top: 10px;
+  text-shadow: 4px 4px #000000;
+}
+.signupbox h1 {
+  font-size: 50px;
+}
+
+input[type="text"]
+{
+    font-size: 20px;
+    font-family: 'Friz Quadrata Std', sans-serif;
+    width: 210px;
+}
+
+input[type="password"]
+{
+  font-size: 20px;
+    font-family: 'Friz Quadrata Std', sans-serif;
+    width: 210px;
+}
+
+input[type='submit']
+{
+  font-family: 'Friz Quadrata Std', sans-serif;
+  color:#EDB852;
+  background: #024a74;
+  border-color: #EDB852;
+  height: 50px;
+  width: 100px;
+  font-weight: bold;
+  text-shadow: none;
+  margin-top: 35px;
+  font-size: 15px;
+  cursor: pointer;
+
+
+}
+
+button[type="submit"]
+{
+  font-family: 'Friz Quadrata Std', sans-serif;
+  color:#EDB852;
+  background: #024a74;
+  border-color: #EDB852;
+  height: 50px;
+  width: 100px;
+  font-weight: bold;
+  text-shadow: none;
+  margin-top: 35px;
+  font-size: 15px;
+  cursor: pointer;
+
+}

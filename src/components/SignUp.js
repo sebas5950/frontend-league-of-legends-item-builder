@@ -44,27 +44,42 @@ const SignUp = () => {
       }
     return(
         <div>
-             <form onSubmit={onSubmit}>
-        <label>
+          <img src='https://wallpapercave.com/wp/wp3159851.jpg'  
+    style={{   position: "absolute",
+    width: "100%",
+    left: "50%",
+    top: "50%",
+    height: "100%",
+    objectFit: "cover",
+    transform: "translate(-50%, -50%)",
+    zIndex: "-1",
+    filter: "blur(0px)"}}/> 
+    <div class="form">
+             <form className="signupbox" onSubmit={onSubmit}>
+              <h1>Sign-up</h1>
+              <br></br>
+        <label className="loginname">
           Username
           </label>  
           <input type='text' name='username' value={username} onChange={handleChange} />
        
-        <label>
-         
-         </label>
+          <br></br>
+        <br></br>
         
        
-        <label>
+        <label className="passwordname">
          Password
          </label>
         <input type='password' name='password' value={password} onChange={handleChange} />
-        
+        <br></br>
+        <br></br>
        
-        <input type='submit' value='Sign up!' />
+        <input type='submit' value='Sign-up' />
       </form>
+      </div>
       {errors? errors.map(error => <div> {error[0]} {error[1]} </div>) :null}
         </div>
+        
     )
 }
 

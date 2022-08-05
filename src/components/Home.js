@@ -21,7 +21,7 @@ function Home({ user, championsData }) {
         </video>
       <div className="logged-in-home">
       <h1 class="hero_title">LEAGUE OF LEGENDS ITEM BUILDER</h1>
-        <h2 class="home_title2">Welcome, {user.username}!</h2>
+        <h2 class="home_title2">Welcome Back, {user.username}!</h2>
       </div>
       </section>
     );
@@ -44,7 +44,7 @@ function Home({ user, championsData }) {
         </video>
       <div className="signup-home">
       <h1 class="hero_title">LEAGUE OF LEGENDS ITEM BUILDER</h1>
-        <h2 class="home_title">Please Login or Sign Up</h2>
+        <h2 class="home_title">Please Login or Sign-up</h2>
       </div>
       </section>
     );
