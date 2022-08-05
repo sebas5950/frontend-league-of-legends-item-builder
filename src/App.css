@@ -59,18 +59,7 @@ nav {
 }
 
 
-.hero_title {
-  font-family: 'Friz Quadrata Std', sans-serif;
-  font-size: 500%;
-  text-align: center;
-  position: absolute;
-  top: 33%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color:#EDB852;
-  width: 900px;
-  text-shadow: 4px 4px #000000;
-}
+
 
 .home_title{
   font-family: 'Friz Quadrata Std', sans-serif;
