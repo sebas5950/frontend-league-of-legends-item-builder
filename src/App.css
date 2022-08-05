@@ -5,5 +5,459 @@
 }
 
 .item-image{
-    width: 4%;
+    width: 20%;
 }
+
+.items-card{
+    display: grid;
+    grid-column: 1;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.champ-image{
+  width: 20%;
+}
+
+.item-image{
+  width: 4%;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+}
+
+
+.navbar a {
+  
+  font-family: 'Friz Quadrata Std', sans-serif;
+  float: left;
+  color:#EDB852;
+  text-align: center;
+  text-decoration: none;
+  font-size: 13.5px;
+  display: block;
+  padding-left:11%; 
+  padding-right: 11%;
+  padding-top: 30px;
+  text-shadow: 1px 1px #000000;
+ 
+  
+}
+.navbar {
+  z-index: 100;
+
+}
+
+.navbar a:hover {
+  font-weight: 1000;
+  color: aliceblue;
+}
+
+
+.hero_title {
+  font-family: 'Friz Quadrata Std', sans-serif;
+  font-size: 500%;
+  text-align: center;
+  position: absolute;
+  top: 33%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:#EDB852;
+  width: 900px;
+  text-shadow: 4px 4px #000000;
+}
+
+.home_title{
+  font-family: 'Friz Quadrata Std', sans-serif;
+  font-size: 200%;
+  text-align: center;
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:#EDB852;
+  text-shadow: 3px 3px #000000;
+  
+}
+
+.home_title2{
+  font-family: 'Friz Quadrata Std', sans-serif;
+  font-size: 200%;
+  text-align: center;
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:#EDB852;
+  text-shadow: 3px 3px #000000;
+  
+}
+
+.logo {
+  display: inline-block;
+  position: absolute;
+  height: 80px;
+  width: auto;
+  margin-left: 50px;
+  margin-top: 5px;
+  
+}
+
+.champ-image {
+
+width: 280px;
+border: 4px solid #EDB852;
+
+}
+
+
+
+
+.championtext {
+font-family: 'Friz Quadrata Std', sans-serif;
+font-size: 140%;
+color:#f1d59b;
+
+}
+
+.card-wrapper {
+width: 98.97%;
+display: grid;
+grid-template-columns: auto auto auto auto auto;
+gap: 50px;
+padding-top: 150px;
+padding-bottom: 20px;
+padding-left: 20px;
+background-image: url('https://cdn1.dotesports.com/wp-content/uploads/2021/09/09145842/SummonersRift.jpg' );
+background-size: cover;
+height: 100vh;
+overflow-y: scroll;
+position: absolute;
+}
+
+.card-wrapper::-webkit-scrollbar {
+display: none;
+
+}
+
+
+
+
+.title {
+
+margin-top: -35px;
+margin-left: 10px;
+}
+
+
+.loginbox {
+font-family: 'Friz Quadrata Std', sans-serif;
+color:#EDB852;
+text-align: center;
+padding-top: 10px;
+text-shadow: 4px 4px #000000;
+
+}
+
+.loginbox h1 {
+font-size: 50px;
+}
+
+.form {
+width: 450px;
+height: 320px;
+background: #111010;
+position: absolute;
+top: 42%;
+left: 50%;
+transform: translate(-50%,-50%);
+border-radius: 25px;
+padding: 40px 25px;
+border: solid 3px #a37e38
+}
+
+.loginname{
+margin: 7px;
+}
+
+.passwordname {
+margin: 7px;
+}
+
+
+.signupbox {
+font-family: 'Friz Quadrata Std', sans-serif;
+color:#EDB852;
+text-align: center;
+padding-top: 10px;
+text-shadow: 4px 4px #000000;
+}
+.signupbox h1 {
+font-size: 50px;
+}
+
+input[type="text"]
+{
+  font-size: 20px;
+  font-family: 'Friz Quadrata Std', sans-serif;
+  width: 200px;
+  background-color: #000000;
+  color: #c2b191;
+  border-color: #EDB852;
+  padding-left:5px;
+  padding-right: 5px;
+}
+
+input[type="password"]
+{
+font-size: 20px;
+  font-family: 'Friz Quadrata Std', sans-serif;
+  width: 200px;
+    background-color: #000000;
+  color: #c2b191;
+  border-color: #EDB852;
+  padding-left:5px;
+  padding-right: 5px;
+}
+
+input[type='submit']
+{
+  font-family: 'Friz Quadrata Std', sans-serif;
+  color:#c2b191;
+  background: #232525;
+  border-color: #EDB852;
+  height: 40px;
+  width: 100px;
+  font-weight: bold;
+  text-shadow: none;
+  margin-top: 35px;
+  font-size: 19px;
+  cursor: pointer;
+
+
+}
+
+button[type="submit"]
+{
+font-family: 'Friz Quadrata Std', sans-serif;
+color:#c2b191;
+background: #232525;
+border-color: #EDB852;
+height: 40px;
+width: 100px;
+font-weight: bold;
+text-shadow: none;
+margin-top: 35px;
+font-size: 19px;
+cursor: pointer;
+
+}
+
+.bigtitle {
+  padding-top: 110px;
+  font-family: 'Friz Quadrata Std', sans-serif;
+  font-size: 300%;
+  padding-left: 50px;
+  color:#EDB852;
+  width: 1000px;
+  text-shadow: 3px 3px #000000;
+}
+
+.detail-image2{
+width: 450px;
+margin-left: 50px;
+margin-top: 20px;
+border: 4px solid #EDB852;
+
+}
+
+.bgimage2{
+
+background-image: url('https://cdn.wallpapersafari.com/31/65/JEdnVm.jpg' );
+background-size: cover;
+height: 100vh;
+overflow-y: scroll;
+position: absolute;
+width: 100%;
+}
+
+.description1 {
+  font-family: 'Friz Quadrata Std', sans-serif;
+width: 1700px;
+color:#c2b191;
+display: flex;
+font-size: 26px;
+text-shadow: 2px 2px #1b1919;
+
+}
+
+.itemdesc {
+  font-family: 'Friz Quadrata Std', sans-serif;
+  width: 1700px;
+  color:#c2b191;
+  font-size: 15px;
+  text-shadow: 2px 2px #1b1919;
+  margin-top: 130px;
+}
+
+.itemdesc h2{
+margin-left: 170px;
+margin-top: -112px;
+color:#EDB852;
+}
+
+.itemdesc p{
+  margin-left: 170px;
+  font-size: 17px;
+}
+
+.description1 p {
+  font-family: 'Friz Quadrata Std', sans-serif;
+  padding-left: 50px;
+  padding-top: 30px;
+  display: block;
+  
+  width: 300;
+ 
+}
+
+.table {
+  font-family: 'Friz Quadrata Std', sans-serif;
+  width: 25%;
+  border: 3px solid;
+  border-color: #EDB852;
+  color:#c2b191;
+  text-shadow: 2px 2px #000000;
+  font-size: 20px;
+  margin-left: 558px;
+  margin-top: -140px;
+  background: #1d1c1c
+}
+
+
+.itemimage {
+  width: 100px;
+  margin-left: 50px;
+  border: 2px solid #EDB852;
+}
+
+.itemtable {
+  font-family: 'Friz Quadrata Std', sans-serif;
+  width: 15%;
+  border: 2px solid;
+  border-color: #EDB852;
+  color:#c2b191;
+  font-size: 15px;
+  margin-left: 168px;
+  margin-top: 15px;
+  background: #1d1c1c
+}
+
+.comment {
+  margin-top: 140px;
+  margin-left: 50px;
+}
+
+.comment input {
+  font-size: 15px;
+  font-family: 'Friz Quadrata Std', sans-serif;
+  width: 600px;
+  height: 40px;
+  background-color: #000000;
+  color: #c2b191;
+  border: solid 1px #a37e38;
+  padding-left:10px;
+  padding-right: 10px;
+}
+
+.comment button {
+  margin-left: 13px;
+  font-size: 18px;
+}
+
+.comment h2 {
+  color:#EDB852;
+  font-family: 'Friz Quadrata Std', sans-serif;
+  text-shadow: 3px 3px #000000;
+}
+
+.commentcard {
+  
+  margin-top:40px;
+  margin-left: 50px;
+  margin-bottom: 60px;
+}
+
+.commentcard h2 {
+  color:#EDB852;
+  font-family: 'Friz Quadrata Std', sans-serif;
+  text-shadow: 3px 3px #000000;
+  font-size: 22px;
+}
+
+.commentcard p {
+  font-size: 15px;
+  font-family: 'Friz Quadrata Std', sans-serif;
+  width: 400px;
+  height: max-content;
+  background-color: #000000;
+  color: #c2b191;
+  border: solid 1px #a37e38;
+  padding-left:10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  word-wrap: break-word;
+}
+ .editbutton {
+  font-family: 'Friz Quadrata Std', sans-serif;
+  color:#c2b191;
+  background: #232525;
+  border-color: #EDB852;
+  height: 28px;
+  width: 60px;
+  text-shadow: none;
+  font-size: 14px;
+  cursor: pointer;
+ }
+
+ .deletebutton {
+  margin-left: 15px;
+  font-family: 'Friz Quadrata Std', sans-serif;
+  color:#c2b191;
+  background: #232525;
+  border-color: #EDB852;
+  height: 28px;
+  width: 60px;
+  text-shadow: none;
+  font-size: 14px;
+  cursor: pointer;
+ }
+
+ .editme{
+  margin-left: 154px;
+  margin-top: -63px;
+ }
+
+ .editme input {
+  height: 28px;
+  width: 260px;
+  background-color: #000000;
+  color: #c2b191;
+  border: solid 1px #a37e38;
+  padding-left:10px;
+  padding-right: 10px;
+  font-size: 15px;
+ }
+ 
+ .editme button {
+  margin-left: 10px;
+  font-size: 15px;
+  width: 75px;
+  height: 30px;
+ }

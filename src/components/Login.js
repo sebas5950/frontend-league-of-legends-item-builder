@@ -19,11 +19,25 @@ function Login({ setUser }) {
     });
   }
 
+  
+
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <section>
+       <img src="https://www.pixelstalk.net/wp-content/uploads/images6/4K-LOL-Wallpaper-Ashe.jpg"  
+    style={{   position: "absolute",
+    width: "100%",
+    left: "50%",
+    top: "50%",
+    height: "100%",
+    objectFit: "cover",
+    transform: "translate(-50%, -50%)",
+    zIndex: "-1",
+    filter: "blur(0px)"}}/> 
+    <div class="form">
+    <form  className="loginbox"onSubmit={handleSubmit}>
         <h1>Login</h1>
-        <label htmlFor="username">Username</label>
+        <br></br>
+        <label className="loginname" htmlFor="username">Username:</label>
         <input
           type="text"
           id="username"
@@ -31,7 +45,9 @@ function Login({ setUser }) {
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
-        <label htmlFor="password">Password</label>
+         <br></br>
+        <br></br>
+        <label  className="passwordname" htmlFor="password">Password:</label>
         <input
           type="password"
           id="password"
@@ -39,9 +55,12 @@ function Login({ setUser }) {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="submit">Login</button>
+          <br></br>
+        <br></br>
+        <button type="submit">LOGIN</button>
       </form>
     </div>
+    </section>
   );
 }
 
