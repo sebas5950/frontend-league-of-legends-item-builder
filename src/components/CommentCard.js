@@ -24,22 +24,26 @@ const CommentCard = ({ comment, user, deleteComment, setComments }) => {
 
 
     return(
-        <div>
+        <div className="commentcard">
             
-            <h1>{user.username}</h1>
+            <h2>{user.username}</h2>
+            <br></br>
             <p>{comment.text}</p>
-            <button className="editbutton"onClick={() => setIsShown(true)}>Edit</button>
-            {isShown &&(
-                <form onSubmit={onEditSubmit}>
-                    <input type="text" text="text" onChange = {handleChange} />
-                    <button type="submit" >Submit</button>
-                </form>
-            )}
-            <button className="delete button"
+            <br></br>
+            <button className="editbutton" onClick={() => setIsShown(true)}>EDIT</button>
+         
+            <button className="deletebutton"
             onClick={(e) => {return deleteComment(comment.id), e.stopPropagation()}}
             >
-                Delete
+                DELETE
                 </button>
+                {isShown &&(
+                <form className="editme" onSubmit={onEditSubmit}>
+                    <input type="text" text="text" placeholder="Edit Comment..." onChange = {handleChange} />
+                    <button type="submit" >SUBMIT</button>
+                </form>
+            )}
+                
         </div>
     )
 }

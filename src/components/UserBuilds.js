@@ -7,24 +7,20 @@ const UserBuilds = ({ items }) => {
 
   return (
     <div className="user builds">
-     <img src={image} />
-     <h2>{name}</h2>
+      <div className="itemdesc">
+     <img class = "itemimage" src={image} />
+     <h2>{name} </h2>
+     <br></br>
      <p>{desc}</p>
-     <table>
+     </div>
+     <table className="itemtable">
         <thead>
           <tr>
-            <th>Health:</th>
-            <th>Magic:</th>
-            <th>Attack:</th>
+            <th>Health: {health}</th>
+            <th>Magic: {magic}</th>
+            <th>Attack: {attack}</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>{health}</td>
-            <td>{magic}</td>
-            <td>{attack}</td>
-          </tr>
-        </tbody>
       </table>
     </div>
   );

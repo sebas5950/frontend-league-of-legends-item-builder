@@ -92,44 +92,44 @@ const ChampionPage = ({ user }) => {
   const { name, title, blurb, attack, defense, magic, difficulty, image } = championData;
 
   return (
-    <div>
-      <h4>
-        {name}, {title}
+    <div className="bgimage2">  
+    <button onClick={handleClick}>back</button>
+      <h4 className="bigtitle">
+        {name}, {title} 
       </h4>
-      <img className="detail-image" src={image} />
-
-      <p>{`Description: ${blurb}`}</p>
-      <table>
+      <div className="description1">
+      <img className="detail-image2" src={image} />
+  
+      <p>{`LORE - ${blurb}`}</p>
+      </div>
+      <table className="table">
         <thead>
           <tr>
-            <th>Difficulty</th>
-            <th>Defense:</th>
-            <th>Magic:</th>
-            <th>Attack:</th>
+            <th>Difficulty: {difficulty}</th>
+            <th>Defense: {defense}</th>
+            <th>Magic: {magic}</th>
+            <th>Attack: {attack}</th>
           </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>{difficulty}</td>
-            <td>{defense}</td>
-            <td>{magic}</td>
-            <td>{attack}</td>
-          </tr>
-        </tbody>
+          </thead>
       </table>
-
       
+
+      <div className="builditems">
       {buildItems}
-      <form onSubmit={onSubmit}>
-        <label>Add a Comment:
-          <input type="text" text="text" onChange = {handleChange} />
+      </div>
+      <h2></h2>
+      <form class = "comment" onSubmit={onSubmit}>
+      <h2>COMMENTS</h2>
+        <label>
+          <input type="text" text="text"  placeholder="Add a Comment..." onChange = {handleChange} />
         </label>
-        <button type ="submit" >Submit</button>
+        
+        <button type ="submit" >SUBMIT</button>
       </form>
+
       {comments.map(comment => {
         return <CommentCard key={comment.id} comment={comment} user = {user} deleteComment={deleteComment} setComments={setComments} />
       })}
-      <button onClick={handleClick}>back</button>
     </div>
   );
 };

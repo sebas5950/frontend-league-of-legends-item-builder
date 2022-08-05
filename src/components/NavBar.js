@@ -11,24 +11,26 @@ function NavBar({ user, setUser }) {
   }
 
   return (
-    <header>
+    <nav className='navbar'>
+   
       <div>
-        <Link to="/">Home</Link>
-        <Link to="/champions">Champions</Link>
-        <Link to="/itembuilds">Builds</Link>
+      <img src="https://cdn.discordapp.com/attachments/981197460493979738/1004830201605267617/league_logo.png" className="logo" alt="logo"/>
+      <Link to="/">HOME</Link>
+      <Link to="/champions">CHAMPIONS</Link>
       </div>
       <div>
         {user ? (
-          <Link to="/" onClick={handleLogoutClick}>Logout</Link>
+           <Link to="/" onClick={handleLogoutClick}>LOGOUT</Link>
         ) : (
           <>
-            <Link to="/signup">Signup</Link>
-            <Link to="/login">Login</Link>
+      <Link to="/signup">SIGN-UP</Link>
+            <Link to="/login">LOGIN</Link>
           </>
         )}
         
       </div>
-    </header>
+ 
+    </nav>
   );
 }
 
