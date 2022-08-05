@@ -65,7 +65,7 @@ function App() {
               />} />
               <Route 
               path="/:id/details"
-              element={<ChampionPage />}
+              element={<ChampionPage user = {user}/>}
               />
               <Route
               path="/itembuilds" 
