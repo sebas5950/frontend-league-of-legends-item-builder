@@ -44,7 +44,7 @@ nav {
   padding-left:11%; 
   padding-right: 11%;
   padding-top: 30px;
-  text-shadow: 1px 1px #000000;
+  text-shadow: 1px 1px #1b1919, 1px 1px #1b1919;
  
   
 }
@@ -69,8 +69,8 @@ nav {
   top: 53%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color:#EDB852;
-  text-shadow: 3px 3px #000000;
+  color:#D3B469;
+  text-shadow: 3px 3px #1b1919, 3px 3px #1b1919;
   
 }
 
@@ -82,8 +82,8 @@ nav {
   top: 53%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color:#EDB852;
-  text-shadow: 3px 3px #000000;
+  color:#D3B469;
+  text-shadow: 3px 3px #1b1919, 3px 3px #1b1919;
   
 }
 
@@ -115,18 +115,18 @@ color:#f1d59b;
 }
 
 .card-wrapper {
-width: 98.97%;
+width: 99%;
 display: grid;
-grid-template-columns: auto auto auto auto auto;
+grid-template-columns: auto auto auto auto auto ;
 gap: 50px;
-padding-top: 150px;
+padding-top: 200px;
 padding-bottom: 20px;
-padding-left: 20px;
+padding-left: 35px;
 background-image: url('https://cdn1.dotesports.com/wp-content/uploads/2021/09/09145842/SummonersRift.jpg' );
 background-size: cover;
 height: 100vh;
 overflow-y: scroll;
-position: absolute;
+position: fixed;
 }
 
 .card-wrapper::-webkit-scrollbar {
@@ -254,7 +254,7 @@ cursor: pointer;
   padding-left: 50px;
   color:#EDB852;
   width: 1000px;
-  text-shadow: 3px 3px #000000;
+  text-shadow: 3px 3px #1b1919;
 }
 
 .detail-image2{
@@ -281,7 +281,7 @@ width: 1700px;
 color:#c2b191;
 display: flex;
 font-size: 26px;
-text-shadow: 2px 2px #1b1919;
+text-shadow: 2px 2px #1b1919, 2px 2px #1b1919, 2px 2px #1b1919, 2px 2px #1b1919;
 
 }
 
@@ -290,7 +290,7 @@ text-shadow: 2px 2px #1b1919;
   width: 1700px;
   color:#c2b191;
   font-size: 15px;
-  text-shadow: 2px 2px #1b1919;
+  text-shadow: 2px 2px #1b1919, 2px 2px #1b1919, 2px 2px #1b1919, 2px 2px #1b1919;
   margin-top: 130px;
 }
 
@@ -321,7 +321,7 @@ color:#EDB852;
   border: 3px solid;
   border-color: #EDB852;
   color:#c2b191;
-  text-shadow: 2px 2px #000000;
+  text-shadow: 2px 2px #1b1919, 2px 2px #1b1919, 2px 2px #1b1919, 2px 2px #1b1919;
   font-size: 20px;
   margin-left: 558px;
   margin-top: -140px;
@@ -450,4 +450,15 @@ color:#EDB852;
   font-size: 15px;
   width: 75px;
   height: 30px;
+ }
+
+ .champion_title {
+  position: fixed;
+  z-index: 50;
+  padding-top: 100px;
+  padding-left: 761px;
+  font-family: 'Friz Quadrata Std', sans-serif;
+  font-size: 310%;
+  color:#D3B469;
+  text-shadow: 3px 3px #1b1919, 3px 3px #1b1919;
  }

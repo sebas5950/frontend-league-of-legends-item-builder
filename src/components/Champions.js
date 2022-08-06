@@ -6,7 +6,7 @@ const Champions = ({championsData}) => {
   
     return(
         <div>
- {/* <h1 class="champion_title">ALL CHAMPIONS</h1> */}
+ <h1 class="champion_title">CHAMPIONS LIST</h1>
         <div className="card-wrapper">
             {championsData.map(champ =>{
         return <ChampionCard champ={champ} key={champ.id}/>
@@ -18,3 +18,4 @@ const Champions = ({championsData}) => {
 }
 
 export default Champions
+
