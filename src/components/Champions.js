@@ -5,7 +5,7 @@ const Champions = ({championsData}) => {
     
   
     return(
-        <div>
+        <div className="bgimage23">
  <h1 class="champion_title">CHAMPIONS LIST</h1>
         <div className="card-wrapper">
             {championsData.map(champ =>{
@@ -18,4 +18,3 @@ const Champions = ({championsData}) => {
 }
 
 export default Champions
-
