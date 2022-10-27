@@ -7,29 +7,10 @@ import NavBar from "./components/NavBar";
 import Champions from "./components/Champions";
 import Login from "./components/Login";
 import Home from "./components/Home";
-import ChampionPage from "./components/ChampionPage"
-import UserBuilds from "./components/UserBuilds";
+import ChampionPage from "./components/ChampionPage";
 
 function App() {
-
-  const [championsData, setChampionsData] = useState([]);
   const [user, setUser] = useState(null);
-  const [filterChamp, setFilterChamp ] = useState([])
-  const [items, setItemsData ] = useState([])
-
-
-  useEffect(() => {
-    fetch("/champions")
-      .then((res) => res.json())
-      .then((data) => setChampionsData(data));
-  }, []);
-
-  useEffect(() => {
-    fetch(`/items`)
-      .then((res) => res.json())
-      .then((data) => setItemsData(data));
-  }, []);
-
 
   useEffect(() => {
     fetch("/me").then((r) => {
@@ -39,60 +20,28 @@ function App() {
     });
   }, []);
 
-   function grabSearch(value){
-    setFilterChamp(value)
-   }
-  const newChamp = championsData.filter((champ) => {
-    return (champ.name.includes(filterChamp))
-  })
-
-
   return (
     <>
       <div>
         <NavBar user={user} setUser={setUser} />
         <div className="content-wrapper">
-          
           {user ? (
             <Routes>
-              <Route 
-              path="/" 
-              element={<Home user={user} 
-              />} />
+              <Route path="/" element={<Home user={user} />} />
+              <Route path="/champions" element={<Champions />} />
               <Route
-              path="/champions"
-              element={<Champions championsData={championsData} 
-              />} />
-              <Route 
-              path="/:id/details"
-              element={<ChampionPage user = {user}/>}
+                path="/:id/details"
+                element={<ChampionPage user={user} />}
               />
-              <Route
-              path="/itembuilds" 
-              element={<UserBuilds items={items} champ={championsData}/>}
-              /> 
             </Routes>
           ) : (
             <Routes>
-              <Route 
-              path="/signup" 
-              element={<SignUp setUser={setUser} 
-              />} />
-              <Route 
-              path="/login" 
-              element={<Login setUser={setUser} 
-              />} />
-              <Route 
-              path="/" 
-              element={<Home
-              />} />
-               <Route
-              path="/champions"
-              element={<Champions championsData={championsData} 
-              />} />
+              <Route path="/signup" element={<SignUp setUser={setUser} />} />
+              <Route path="/login" element={<Login setUser={setUser} />} />
+              <Route path="/" element={<Home />} />
+              <Route path="/champions" element={<Champions />} />
             </Routes>
           )}
-          
         </div>
         <Footer />
       </div>
